@@ -1,0 +1,12 @@
+Label {
+    text-align: center;
+    width: 100%;
+}
+
+.welcomeString {
+}
+
+VerticalGroup {
+  layout: grid;
+  grid-gutter: 1;
+}
