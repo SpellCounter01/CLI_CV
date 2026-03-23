@@ -3,6 +3,7 @@ from textual.binding import Binding
 from textual.containers import VerticalGroup
 from textual.screen import Screen
 from textual.widgets import Label
+from screens.textEditor import TextEditor
 
 
 class LandingPage(Screen):
@@ -37,3 +38,6 @@ class LandingPage(Screen):
                 options.append(tempLabel)
 
         yield VerticalGroup(welcomeString, VerticalGroup(*options, classes="optionDiv"))
+
+    def action_new(self):
+        self.app.switch_screen(screen=TextEditor())
