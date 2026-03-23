@@ -31,7 +31,9 @@ class LandingPage(Screen):
 
         for keybind in self.BINDINGS:
             if keybind.description:
-                tempLabel = Label(content=keybind.description)
+                tempLabel = Label(
+                    f"[bold underline]{keybind.key}[/] [dim]{keybind.description}[/]"
+                )
                 options.append(tempLabel)
 
         yield VerticalGroup(welcomeString, VerticalGroup(*options, classes="optionDiv"))
